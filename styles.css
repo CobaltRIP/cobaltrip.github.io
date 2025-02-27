@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #000005;
+    color: #D3D3D3;
+    font-family: "Exo 2", serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 150%;
+}
+
+#title {
+    display: block;
+    font-size: 5vh;
+}
+
+#description {
+    display: block;
+    font-size: 2.5vh;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.developers {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.person {
+    border: 1px solid #454545;
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #000005;
+}
+
+.person-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid #454545;
+}
+
+.person-text {
+    text-align: left;
+    font-weight: 300;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 300;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+    background-color: #000005;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.discord {
+    background: #5865F2;
+    color: white;
+}
+
+.download {
+    background: #28a745;
+    color: white;
+}
+
+.full-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000005;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #454545;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #454545;
+}
+
+.features {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.feature {
+    border: 1px solid #454545;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #000005;
+}
+
+.feature-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #000005;
+    border-bottom: 1px solid #454545;
+}
+
+.feature-header h1 {
+    font-size: 2.5vh;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #D3D3D3;
+    font-size: 2.5vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.feature.active .toggle-button {
+    transform: rotate(0deg);
+}
+
+.feature-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 10px;
+    text-align: left;
+    font-size: larger;
+    background-color: #000005;
+    width: 100%;
+}
+
+.feature-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.feature.active .feature-content {
+    max-height: 1000px;
+    padding: 10px;
+}
+
+.invis_shit {
+    color: #000005;
+    size: 1;
+}
